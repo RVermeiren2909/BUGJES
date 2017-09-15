@@ -1,0 +1,1545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataEntryScreen HelpId="2026" Mode="InputAndSelection" Version="1.0" LastModified="2017-06-27 16:40:52Z" ShowSaveButton="True" ShowRefreshButton="True">
+	<MainTable Name="Job" Alias="CN0" ViewfieldConfigurationName="Gebouw" UseAuxiliaryFunction10="True">
+		<Fields>
+			<Field Name="JobId" Alias="F0" />
+			<Field Name="JobRecStatus" Alias="F1" />
+			<Field Name="JobDescr" Alias="F2" />
+			<Field Name="JobBldId" Alias="F3" />
+			<Field Name="JobImageFile" Alias="F4" />
+			<Field Name="JobMatCalc" Alias="F5" />
+			<Field Name="JobImagefile2" Alias="F6" />
+			<Field Name="JobEqmtId" Alias="F7" />
+			<Field Name="JobSpcId" Alias="F8" />
+			<Field Name="JobExtCalc" Alias="F9" />
+			<Field Name="JobFalId" Alias="F10" />
+			<Field Name="JobTlsCalc" Alias="F14" />
+			<Field Name="JobSvcId" Alias="F15" />
+			<Field Name="JobSitId" Alias="F16" />
+			<Field Name="JobWotId" Alias="F17" />
+			<Field Name="JobDepId" Alias="F18" />
+			<Field Name="JobPriId" Alias="F19" />
+			<Field Name="JobPostpRemark" Alias="F20" />
+			<Field Name="JobCcrId" Alias="F21" />
+			<Field Name="JobHoursCalc" Alias="F22" />
+			<Field Name="JobDocId" Alias="F23" />
+			<Field Name="JobReportFKEmpId" Alias="F24" />
+			<Field Name="JobSdrtId" Alias="F25" />
+			<Field Name="JobReportText" Alias="F26" />
+			<Field Name="JobSkcId" Alias="F27" />
+			<Field Name="JobEmpId" Alias="F28" />
+			<Field Name="JobImagefile3" Alias="F29" />
+			<Field Name="JobImagefile4" Alias="F30" />
+			<Field Name="JobVdrId" Alias="F31" />
+			<Field Name="JobText" Alias="F34" />
+			<Field Name="JobDurationInWorkingDays" Alias="F35" />
+			<Field Name="JobDurationCalc" Alias="F36" />
+			<Field Name="JobSchStartDate" Alias="F37" />
+			<Field Name="JobTargetDate" Alias="F38" />
+			<Field Name="JobHoursCalc" Alias="F39" />
+			<Field Name="JobRequestDate" Alias="F40" />
+			<Field Name="JobRequestEmpId" Alias="F41" />
+			<Field Name="JobOpenDate" Alias="F42" />
+			<Field Name="JobOpenEmpId" Alias="F43" />
+			<Field Name="JobApprvDate" Alias="F44" />
+			<Field Name="JobResCalc" Alias="F45" />
+			<Field Name="JobApprvEmpId" Alias="F46" />
+			<Field Name="JobPostpDate" Alias="F47" />
+			<Field Name="JobPostpEmpId" Alias="F48" />
+			<Field Name="JobTotalCalc" Alias="F49" />
+			<Field Name="JobPrsId" Alias="F50" />
+			<Field Name="JobReportDate" Alias="F51" />
+			<Field Name="_jobetpid" Alias="F11" />
+			<Field Name="jobeqmid" Alias="F12" />
+			<Field Name="_jobeqmoperational" Alias="F13" />
+			<Field Name="_jobeqmoperational" Alias="F32" />
+			<Field Name="jobactivedate" Alias="F33" />
+			<Field Name="jobfinishdate" Alias="F52" />
+			<Field Name="jobduration" Alias="F53" />
+			<Field Name="jobhours" Alias="F54" />
+			<Field Name="_jobeqmoperational" Alias="F55" />
+		</Fields>
+		<Relations>
+			<ForeignKeyBasedRelation Id="2" ForeignKeyName="fkjobbldid">
+				<ForeignTable Name="Building" Alias="FK0002">
+					<Fields>
+						<Field Name="BldCcrId" Alias="F2000" />
+						<Field Name="BldDepId" Alias="F2001" />
+						<Field Name="BldSitId" Alias="F2002" />
+						<Field Name="BldDescr" Alias="F2003" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="7" ForeignKeyName="fkjobccrid">
+				<ForeignTable Name="CostCenter" Alias="FK0007">
+					<Fields>
+						<Field Name="CcrDescr1" Alias="F7000" />
+					</Fields>
+					<MaskInfo Rights="Add" AddContext="1">
+						<ContextStatus Context="1" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="6" ForeignKeyName="fkjobdepid">
+				<ForeignTable Name="Department" Alias="FK0006">
+					<Fields>
+						<Field Name="DepDescr" Alias="F6000" />
+					</Fields>
+					<MaskInfo Rights="Add" AddContext="1">
+						<ContextStatus Context="1" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="22" ForeignKeyName="fkjobdocid">
+				<ForeignTable Name="Document" Alias="FK0022">
+					<Fields>
+						<Field Name="DocDescr" Alias="F22000" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="1" />
+						<ContextStatus Context="1" Status="32" />
+						<ContextStatus Context="1" Status="256" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="21" ForeignKeyName="fkjobopenempid">
+				<ForeignTable Name="Employee" Alias="FK0021">
+					<Fields>
+						<Field Name="EmpDescr" Alias="F21000" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" Update="True" />
+						<ContextStatus Context="2" Status="0" Update="True" />
+						<ContextStatus Context="4" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="20" ForeignKeyName="fkjobrequestempid">
+				<ForeignTable Name="Employee" Alias="FK0020">
+					<Fields>
+						<Field Name="EmpDescr" Alias="F20000" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" Update="True" />
+						<ContextStatus Context="2" Status="0" Update="True" />
+						<ContextStatus Context="4" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="19" ForeignKeyName="fkjobpostpempid">
+				<ForeignTable Name="Employee" Alias="FK0019">
+					<Fields>
+						<Field Name="EmpDescr" Alias="F19000" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" Update="True" />
+						<ContextStatus Context="2" Status="0" Update="True" />
+						<ContextStatus Context="4" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="18" ForeignKeyName="fkjobapprvempid">
+				<ForeignTable Name="Employee" Alias="FK0018">
+					<Fields>
+						<Field Name="EmpDescr" Alias="F18000" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" Update="True" />
+						<ContextStatus Context="2" Status="0" Update="True" />
+						<ContextStatus Context="4" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="12" ForeignKeyName="fkjobempid">
+				<ForeignTable Name="Employee" Alias="FK0012">
+					<Fields>
+						<Field Name="EmpSkcId" Alias="F12000" />
+						<Field Name="EmpTariff1" Alias="F12001" />
+						<Field Name="EmpDescr" Alias="F12002" />
+					</Fields>
+					<MaskInfo Rights="Add" AddContext="1">
+						<ContextStatus Context="1" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="4" ForeignKeyName="fkjobreportfkempid">
+				<ForeignTable Name="Employee" Alias="FK0004">
+					<Fields>
+						<Field Name="EmpDescr" Alias="F4000" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="14" ForeignKeyName="fkjobeqmtid">
+				<ForeignTable Name="EqmType" Alias="FK0014">
+					<Fields>
+						<Field Name="eqmtusespecificfailtypes" Alias="F14001" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="64" Status="0" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="5" ForeignKeyName="fkjobeqmid">
+				<ForeignTable Name="Equipment" Alias="FK0005">
+					<Fields>
+						<Field Name="EqmSitId" Alias="F5001" />
+						<Field Name="EqmEqmtId" Alias="F5002" />
+						<Field Name="EqmBldId" Alias="F5003" />
+						<Field Name="EqmSpcId" Alias="F5004" />
+						<Field Name="EqmDepId" Alias="F5005" />
+						<Field Name="EqmCcrId" Alias="F5006" />
+						<Field Name="eqmdescr" Alias="F5000" />
+						<Field Name="eqmcode" Alias="F5007" />
+						<Field Name="eqmdescr" Alias="F5008" />
+					</Fields>
+					<MaskInfo Rights="Add" AddContext="1024">
+						<ContextStatus Context="1024" Status="1" />
+						<ContextStatus Context="1024" Status="2" />
+						<ContextStatus Context="1024" Status="4" />
+						<ContextStatus Context="1024" Status="8" />
+						<ContextStatus Context="1024" Status="16" />
+						<ContextStatus Context="1024" Status="32" />
+						<ContextStatus Context="1024" Status="256" />
+						<ContextStatus Context="1024" Status="512" />
+						<ContextStatus Context="1024" Status="1024" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="17" ForeignKeyName="fkjobpriid">
+				<ForeignTable Name="Priority" Alias="FK0017">
+					<Fields>
+						<Field Name="PriDescr" Alias="F17000" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="1" ForeignKeyName="fkjobprsid">
+				<ForeignTable Name="ProgressStatus" Alias="FK0001">
+					<Fields>
+						<Field Name="PRSDESCR" Alias="F1000" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="32" Status="0" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="9" ForeignKeyName="fkjobsvcid">
+				<ForeignTable Name="ServContract" Alias="FK0009">
+					<Fields>
+						<Field Name="SvcDescr1" Alias="F9000" />
+					</Fields>
+					<MaskInfo Rights="Add" AddContext="32">
+						<ContextStatus Context="32" Status="128" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="3" ForeignKeyName="fkjobsdrtid">
+				<ForeignTable Name="ServiceDeskReportType" Alias="FK0003">
+					<Fields>
+						<Field Name="SdrtDescr" Alias="F3000" />
+						<Field Name="sdrtdescr" Alias="F3001" />
+						<Field Name="_sdrtsuggestion" Alias="F3002" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="13" ForeignKeyName="fkjobsitid">
+				<ForeignTable Name="Site" Alias="FK0013">
+					<Fields>
+						<Field Name="SitDescr" Alias="F13000" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="11" ForeignKeyName="fkjobskcid">
+				<ForeignTable Name="SkillCat" Alias="FK0011">
+					<Fields>
+						<Field Name="SkcDescr1" Alias="F11000" />
+					</Fields>
+					<MaskInfo Rights="Add" AddContext="1">
+						<ContextStatus Context="1" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="16" ForeignKeyName="fkjobspcid">
+				<ForeignTable Name="Space" Alias="FK0016">
+					<Fields>
+						<Field Name="SpcDescr" Alias="F16000" />
+						<Field Name="SpcBldId" Alias="F16001" />
+						<Field Name="SpcCcrId" Alias="F16002" />
+						<Field Name="SpcDepId" Alias="F16003" />
+						<Field Name="SpcSitId" Alias="F16004" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="1" Status="0" />
+						<ContextStatus Context="2" Status="0" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation IsOneToMany="True" Id="28" ForeignKeyName="fkjobprshjobid">
+				<ForeignTable Name="JobProgressStatusHistory" Alias="FK0028">
+					<Fields>
+						<Field Name="JobprshDate" Alias="F28000" />
+						<Field Name="JobprshRemarkText" Alias="F28001" />
+						<Field Name="JobprshOldPrsId" Alias="F28002" />
+						<Field Name="JobprshNewPrsId" Alias="F28003" />
+						<Field Name="JobprshEmpId" Alias="F28004" />
+					</Fields>
+					<Relations>
+						<ForeignKeyBasedRelation Id="29" ForeignKeyName="fkjobprshempid">
+							<ForeignTable Name="Employee" Alias="FK2829">
+								<Fields>
+									<Field Name="EmpDescr" Alias="F29000" />
+								</Fields>
+								<MaskInfo>
+									<ContextStatus Context="1" Status="0" Update="True" />
+									<ContextStatus Context="2" Status="0" Update="True" />
+									<ContextStatus Context="4" Status="0" Update="True" />
+								</MaskInfo>
+							</ForeignTable>
+						</ForeignKeyBasedRelation>
+						<ForeignKeyBasedRelation Id="31" ForeignKeyName="fkjobprsholdprsid">
+							<ForeignTable Name="ProgressStatus" Alias="FK2831">
+								<Fields>
+									<Field Name="PrsDescr" Alias="F31000" />
+								</Fields>
+								<MaskInfo>
+									<ContextStatus Context="1" Status="0" Update="True" />
+									<ContextStatus Context="2" Status="0" Update="True" />
+									<ContextStatus Context="4" Status="0" Update="True" />
+									<ContextStatus Context="8" Status="0" Update="True" />
+									<ContextStatus Context="16" Status="0" Update="True" />
+									<ContextStatus Context="32" Status="0" Update="True" />
+									<ContextStatus Context="32768" Status="0" Update="True" />
+								</MaskInfo>
+							</ForeignTable>
+						</ForeignKeyBasedRelation>
+						<ForeignKeyBasedRelation Id="30" ForeignKeyName="fkjobprshnewprsid">
+							<ForeignTable Name="ProgressStatus" Alias="FK2830">
+								<Fields>
+									<Field Name="PrsDescr" Alias="F30000" />
+								</Fields>
+								<MaskInfo>
+									<ContextStatus Context="1" Status="0" Update="True" />
+									<ContextStatus Context="2" Status="0" Update="True" />
+									<ContextStatus Context="4" Status="0" Update="True" />
+									<ContextStatus Context="8" Status="0" Update="True" />
+									<ContextStatus Context="16" Status="0" Update="True" />
+									<ContextStatus Context="32" Status="0" Update="True" />
+									<ContextStatus Context="32768" Status="0" Update="True" />
+								</MaskInfo>
+							</ForeignTable>
+						</ForeignKeyBasedRelation>
+					</Relations>
+					<MaskInfo>
+						<ContextStatus Context="0" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation IsOneToMany="True" Id="25" ForeignKeyName="fkjobrjobid">
+				<ForeignTable Name="JobRes" Alias="FK0025">
+					<Fields>
+						<Field Name="JobrCrmId" Alias="F25000" />
+						<Field Name="JobrHoursCalc" Alias="F25001" />
+						<Field Name="JobrTariffCalc" Alias="F25002" />
+						<Field Name="JobrCostCalc" Alias="F25003" />
+						<Field Name="JobrLineId" Alias="F25004" />
+					</Fields>
+					<Relations>
+						<ForeignKeyBasedRelation Id="26" ForeignKeyName="fkjobrcrmid">
+							<ForeignTable Name="CraftsMan" Alias="FK2526">
+								<Fields>
+									<Field Name="CrmSkcId" Alias="F26000" />
+									<Field Name="CrmTariff1" Alias="F26001" />
+									<Field Name="CrmDescr1" Alias="F26002" />
+								</Fields>
+								<Relations>
+									<ForeignKeyBasedRelation Id="27" ForeignKeyName="fkcrmskcid">
+										<ForeignTable Name="SkillCat" Alias="FK2627">
+											<Fields>
+												<Field Name="SkcDescr1" Alias="F27000" />
+											</Fields>
+											<MaskInfo>
+												<ContextStatus Context="1" Status="0" Update="True" />
+											</MaskInfo>
+										</ForeignTable>
+									</ForeignKeyBasedRelation>
+								</Relations>
+								<MaskInfo>
+									<ContextStatus Context="1" Status="0" Update="True" />
+								</MaskInfo>
+							</ForeignTable>
+						</ForeignKeyBasedRelation>
+					</Relations>
+					<MaskInfo Rights="Delete" AddStatus="4">
+						<ContextStatus Context="0" Status="1" Update="True" />
+						<ContextStatus Context="0" Status="2" Update="True" />
+						<ContextStatus Context="0" Status="4" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="10" ForeignKeyName="fkjobvdrid">
+				<ForeignTable Name="Vendor" Alias="FK0010">
+					<Fields>
+						<Field Name="VdrDescr" Alias="F10000" />
+					</Fields>
+					<MaskInfo Rights="Add" AddContext="1">
+						<ContextStatus Context="1" Status="0" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="8" ForeignKeyName="fkjobwotid">
+				<ForeignTable Name="WorkOrderType" Alias="FK0008">
+					<Fields>
+						<Field Name="WotDescr1" Alias="F8000" />
+					</Fields>
+					<MaskInfo Rights="Add" AddContext="256">
+						<ContextStatus Context="256" Status="0" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation IsOneToMany="True" Id="15" ForeignKeyName="fkjobijobid">
+				<ForeignTable Name="JOBINSP" Alias="FK0015">
+					<Fields>
+						<Field Name="jobilineid" Alias="F15000" />
+						<Field Name="jobipoint" Alias="F15001" />
+						<Field Name="jobiispltext" Alias="F15002" />
+						<Field Name="jobiqualok" Alias="F15003" />
+						<Field Name="jobimsrid" Alias="F15004" />
+						<Field Name="jobivalue" Alias="F15005" />
+						<Field Name="jobinominalvalue" Alias="F15006" />
+					</Fields>
+					<Relations>
+						<ForeignKeyBasedRelation Id="32" ForeignKeyName="fkjobimsrid" UseParentAuthorization="True">
+							<ForeignTable Name="MEASURECODE" Alias="FK0032">
+								<Fields>
+									<Field Name="msrunit" Alias="F32000" />
+									<Field Name="msrdescr1" Alias="F32001" />
+								</Fields>
+								<MaskInfo Rights="Delete">
+									<ContextStatus Context="1" Status="0" />
+								</MaskInfo>
+							</ForeignTable>
+						</ForeignKeyBasedRelation>
+					</Relations>
+					<MaskInfo Rights="Delete" AddContext="1" AddStatus="1">
+						<ContextStatus Context="1" Status="1" Update="True" />
+						<ContextStatus Context="1" Status="2" Update="True" />
+						<ContextStatus Context="1" Status="4" Update="True" />
+						<ContextStatus Context="1" Status="16" Update="True" />
+						<ContextStatus Context="1" Status="32" Update="True" />
+						<ContextStatus Context="1" Status="64" Update="True" />
+						<ContextStatus Context="1" Status="4096" Update="True" />
+						<ContextStatus Context="1" Status="8192" Update="True" />
+						<ContextStatus Context="1" Status="16384" Update="True" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="23" ForeignKeyName="fkjobfalid" UseParentAuthorization="True">
+				<ForeignTable Name="FAILTYPE" Alias="FK0023">
+					<Fields>
+						<Field Name="falid" Alias="F23000" />
+						<Field Name="faldescr1" Alias="F23001" />
+					</Fields>
+					<MaskInfo>
+						<ContextStatus Context="256" Status="0" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+			<ForeignKeyBasedRelation Id="24" ForeignKeyName="fk_jobetpid" UseParentAuthorization="True">
+				<ForeignTable Name="_EQMTYPEPARTS" Alias="FK0024">
+					<Fields>
+						<Field Name="_etpdescr" Alias="F24000" />
+					</Fields>
+					<MaskInfo Rights="Delete">
+						<ContextStatus Context="0" Status="0" />
+					</MaskInfo>
+				</ForeignTable>
+			</ForeignKeyBasedRelation>
+		</Relations>
+		<MaskInfo Rights="Delete" AddContext="2048" AddStatus="1">
+			<ContextStatus Context="2048" Status="1" Update="True" />
+			<ContextStatus Context="2048" Status="2" Update="True" />
+			<ContextStatus Context="2048" Status="4" Update="True" />
+			<ContextStatus Context="2048" Status="16" Update="True" />
+			<ContextStatus Context="2048" Status="8192" Update="True" />
+		</MaskInfo>
+	</MainTable>
+	<Form Top="0" Left="0" Width="840" Height="580">
+		<Edit DataBinding="F1" Id="EdtJobRecStatus" Top="0" Left="0" Width="100" Visible="False" />
+		<GroupBox Id="Gpb" Top="0" Left="5" Width="830" Height="35">
+			<Label Id="TxtJob" Top="10" Left="10" Width="115">
+				<Translations>
+					<String Language="DE" Value="Auftrag" />
+					<String Language="EN" Value="Job" />
+					<String Language="ES" Value="Trabajo" />
+					<String Language="FR" Value="Tâche" />
+					<String Language="NL" Value="Job" />
+					<String Language="PL" Value="Zadanie" />
+				</Translations>
+			</Label>
+			<SelectionList RelationDataBinding="CN0" DataBinding="F0" Id="EdtJobId" Top="10" Left="125" Width="100" />
+			<ComboBox DropDownDisplayProperty="F3000" RelationDataBinding="FK0003" DataBinding="F25" Id="EdtJobSdrtId" Top="10" Left="235" Width="300" Mandatory="True" />
+			<Label Id="TxtLabel" Top="10" Left="605" Width="115">
+				<Translations>
+					<String Language="DE" Value="Datum" />
+					<String Language="EN" Value="Date" />
+					<String Language="ES" Value="Fecha" />
+					<String Language="FR" Value="Date" />
+					<String Language="NL" Value="Datum" />
+					<String Language="PL" Value="Data" />
+				</Translations>
+			</Label>
+			<DateTime DataBinding="F51" ActionId="A4" Id="EdtJobReportDate" Top="10" Left="720" Width="100" ReadOnly="True" />
+			<Translations />
+		</GroupBox>
+		<Multipage Id="MultiPage" Top="40" Left="5" Width="830" Height="535">
+			<MultipageTab Id="TabPage0">
+				<GroupBox Id="Gpb1" Top="0" Left="5" Width="405" Height="115">
+					<Label Id="TxtAfdeling" Top="10" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Abteilung" />
+							<String Language="EN" Value="Department" />
+							<String Language="ES" Value="Departamento" />
+							<String Language="FR" Value="Département" />
+							<String Language="NL" Value="Klant" />
+							<String Language="PL" Value="Dział" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F6000" RelationDataBinding="FK0006" DataBinding="F18" Id="EdtJobDepId" Top="10" Left="120" Width="280" Mandatory="True" />
+					<Label Id="TxtGebouw" Top="30" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Gebäude" />
+							<String Language="EN" Value="Building" />
+							<String Language="ES" Value="Edificio" />
+							<String Language="FR" Value="Bâtiment" />
+							<String Language="NL" Value="Gebouw" />
+							<String Language="PL" Value="Budynek" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F2003" RelationDataBinding="FK0002" DataBinding="F3" ActionId="A0" Id="EdtJobBldId" Top="30" Left="120" Width="280" />
+					<Label Id="TxtMiddel" Top="50" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Mittel" />
+							<String Language="EN" Value="Inventory" />
+							<String Language="ES" Value="Medio" />
+							<String Language="FR" Value="Ressource" />
+							<String Language="NL" Value="Middel" />
+							<String Language="PL" Value="Środek" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F5007" RelationDataBinding="FK0005" DataBinding="F12" Id="Edtjobeqmid" Top="50" Left="120" Width="75" />
+					<Edit DataBinding="F5008" Id="Edteqmdescr" Top="50" Left="195" Width="205" ReadOnly="True" />
+					<Label Id="Label0" Top="70" Left="5" Width="115">
+						<Translations>
+							<String Language="NL" Value="Onderdeel" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F24000" RelationDataBinding="FK0024" DataBinding="F11" Id="Edt_jobetpid" Top="70" Left="120" Width="280" ReadOnly="True" />
+					<Edit DataBinding="F55" Id="Edt_jobeqmoperational2" Top="90" Left="5" Width="5" Visible="False" Mandatory="True" />
+					<Label Id="Label1" Top="90" Left="10" Width="110">
+						<Translations>
+							<String Language="NL" Value="Kan het toestel nog gebruikt worden?" />
+						</Translations>
+					</Label>
+					<RadioButton Value="J" TextLeft="False" DataBinding="F13" Id="Edt_jobeqmoperational" Top="90" Left="120" Width="70">
+						<Translations>
+							<String Language="NL" Value="Ja" />
+						</Translations>
+					</RadioButton>
+					<RadioButton Value="N" TextLeft="False" DataBinding="F32" Id="Edt_jobeqmoperational1" Top="90" Left="190" Width="90">
+						<Translations>
+							<String Language="NL" Value="Nee" />
+						</Translations>
+					</RadioButton>
+					<Translations />
+				</GroupBox>
+				<GroupBox Id="Gpb2" Top="0" Left="415" Width="405" Height="115">
+					<Label Id="TxtStoringsoorzaak" Top="10" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Störungsursache" />
+							<String Language="EN" Value="Failure cause" />
+							<String Language="ES" Value="Causa de avería" />
+							<String Language="FR" Value="Cause de panne" />
+							<String Language="NL" Value="Storingsoorzaak" />
+							<String Language="PL" Value="Przyczyna awarii" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F23001" RelationDataBinding="FK0023" DataBinding="F10" Id="EdtJobFalId" Top="10" Left="120" Width="280" />
+					<Label Id="TxtContract" Top="30" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Vertrag" />
+							<String Language="EN" Value="Contract" />
+							<String Language="ES" Value="Contrato" />
+							<String Language="FR" Value="Contrat" />
+							<String Language="NL" Value="Contract" />
+							<String Language="PL" Value="Umowa" />
+						</Translations>
+					</Label>
+					<SelectionList RelationDataBinding="FK0009" DataBinding="F15" Id="EdtJobSvcId" Top="30" Left="120" Width="100" />
+					<Edit DataBinding="F9000" Id="EdtSvcDescr1" Top="30" Left="220" Width="180" ReadOnly="True" />
+					<Label Id="TxtJobsoort" Top="50" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Auftragsart" />
+							<String Language="EN" Value="Job type" />
+							<String Language="ES" Value="Clase de trabajo" />
+							<String Language="FR" Value="Type de tâche" />
+							<String Language="NL" Value="Jobsoort" />
+							<String Language="PL" Value="Rodzaj zadania" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F8000" RelationDataBinding="FK0008" DataBinding="F17" Id="EdtJobWotId" Top="50" Left="120" Width="280" />
+					<Label Id="TxtPrioriteit" Top="70" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Priorität" />
+							<String Language="EN" Value="Priority" />
+							<String Language="ES" Value="Prioridad" />
+							<String Language="FR" Value="Priorité" />
+							<String Language="NL" Value="Prioriteit" />
+							<String Language="PL" Value="Priorytet" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F17000" RelationDataBinding="FK0017" DataBinding="F19" ActionId="A3" Id="EdtJobPriId" Top="70" Left="120" Width="280" />
+					<Label Id="TxtLabel2" Top="90" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Fortschrittsstatus" />
+							<String Language="EN" Value="Progress status" />
+							<String Language="ES" Value="Estado de progreso" />
+							<String Language="FR" Value="Statut de progression" />
+							<String Language="NL" Value="Voortgangsstatus" />
+							<String Language="PL" Value="Status postępu" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F1000" RelationDataBinding="FK0001" DataBinding="F50" Id="EdtJobPrsId" Top="90" Left="120" Width="280" ReadOnly="True" />
+					<Translations />
+				</GroupBox>
+				<GroupBox Id="GpbMelding" Top="115" Left="5" Width="405" Height="155">
+					<Label Id="TxtDoorDatum" Top="15" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Durch" />
+							<String Language="EN" Value="By" />
+							<String Language="ES" Value="Por" />
+							<String Language="FR" Value="Par" />
+							<String Language="NL" Value="Door" />
+							<String Language="PL" Value="Przez" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F4000" RelationDataBinding="FK0004" DataBinding="F24" Id="EdtJobReportFKEmpId" Top="15" Left="120" Width="280" />
+					<Text DataBinding="F26" Id="EdtJobReportText" Top="40" Left="5" Width="395" Height="105" />
+					<Translations>
+						<String Language="DE" Value="Melden" />
+						<String Language="EN" Value="Registration" />
+						<String Language="ES" Value="Notificación" />
+						<String Language="FR" Value="Notification" />
+						<String Language="NL" Value="Melding" />
+						<String Language="PL" Value="Zgłoszenie" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="Gpb3" Top="115" Left="415" Width="405" Height="65">
+					<Label Id="TxtLabel1" Top="15" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Anhang" />
+							<String Language="EN" Value="Attachment" />
+							<String Language="ES" Value="Adjunto" />
+							<String Language="FR" Value="Annexe" />
+							<String Language="NL" Value="Bijlage" />
+							<String Language="PL" Value="Załącznik" />
+						</Translations>
+					</Label>
+					<SelectionList RelationDataBinding="FK0022" DataBinding="F23" Id="EdtJobDocId" Top="15" Left="120" Width="100" />
+					<Edit DataBinding="F22000" Id="EdtDocDescr" Top="15" Left="220" Width="180" ReadOnly="True" />
+					<Button ActionId="A5" Id="BtnBijlageTonen" Top="40" Left="35" Width="150">
+						<Translations>
+							<String Language="DE" Value="Anhang anzeigen" />
+							<String Language="EN" Value="Show attachment" />
+							<String Language="ES" Value="Mostrar adjunto" />
+							<String Language="FR" Value="Afficher annexe" />
+							<String Language="NL" Value="Bijlage tonen" />
+							<String Language="PL" Value="Pokaż załącznik" />
+						</Translations>
+					</Button>
+					<Button ActionId="A6" DisableWhenReadOnly="True" Id="BtnBijlageUploaden" Top="40" Left="220" Width="150">
+						<Translations>
+							<String Language="DE" Value="Anhang hochladen" />
+							<String Language="EN" Value="Upload attachment" />
+							<String Language="ES" Value="Cargar adjunto" />
+							<String Language="FR" Value="Télécharger annexe" />
+							<String Language="NL" Value="Bijlage uploaden" />
+							<String Language="PL" Value="Dodaj załącznik" />
+						</Translations>
+					</Button>
+					<Translations>
+						<String Language="DE" Value="Anhang" />
+						<String Language="EN" Value="Attachment" />
+						<String Language="ES" Value="Adjunto" />
+						<String Language="FR" Value="Annexe" />
+						<String Language="NL" Value="Bijlage" />
+						<String Language="PL" Value="Załącznik" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GpbUitvoerenDoor" Top="185" Left="415" Width="405" Height="80">
+					<Label Id="TxtVakgroep" Top="15" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Fachgruppe" />
+							<String Language="EN" Value="Skills group" />
+							<String Language="ES" Value="Grupo especialista" />
+							<String Language="FR" Value="Équipe professionnelle" />
+							<String Language="NL" Value="Vakgroep" />
+							<String Language="PL" Value="Grupa robocza" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F11000" RelationDataBinding="FK0011" DataBinding="F27" Id="EdtJobSkcId" Top="15" Left="120" Width="280" />
+					<Label Id="TxtIntern" Top="35" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Mitarbeiter" />
+							<String Language="EN" Value="Employee" />
+							<String Language="ES" Value="Empleado" />
+							<String Language="FR" Value="Employé" />
+							<String Language="NL" Value="Medewerker" />
+							<String Language="PL" Value="Pracownik" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F12002" RelationDataBinding="FK0012" DataBinding="F28" Id="EdtJobEmpId" Top="35" Left="120" Width="280" />
+					<Label Id="TxtExtern1" Top="55" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Lieferant" />
+							<String Language="EN" Value="Supplier" />
+							<String Language="ES" Value="Proveedor" />
+							<String Language="FR" Value="Fournisseur" />
+							<String Language="NL" Value="Leverancier" />
+							<String Language="PL" Value="Dostawca" />
+						</Translations>
+					</Label>
+					<ComboBox DropDownDisplayProperty="F10000" DropDownOrderBy="VdrDescr" RelationDataBinding="FK0010" DataBinding="F31" Id="EdtJobVdrId" Top="55" Left="120" Width="280" />
+					<Translations>
+						<String Language="DE" Value="Ausführen durch" />
+						<String Language="EN" Value="Execute by" />
+						<String Language="ES" Value="Ejecución a cargo de" />
+						<String Language="FR" Value="Exécution par" />
+						<String Language="NL" Value="Uitvoeren door" />
+						<String Language="PL" Value="Wykonawca" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GroupBox0" Top="265" Left="5" Width="405" Height="100">
+					<Text DataBinding="F3002" Id="Edt_sdrtsuggestion" Top="15" Left="5" Width="395" Height="80" ReadOnly="True" />
+					<Translations>
+						<String Language="NL" Value="Suggestie/Oplossing" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GpbWerkinstructie" Top="265" Left="415" Width="405" Height="100">
+					<Text DataBinding="F34" Id="EdtJobText" Top="15" Left="5" Width="395" Height="80" />
+					<Translations>
+						<String Language="DE" Value="Arbeitsanweisung" />
+						<String Language="EN" Value="Work instruction" />
+						<String Language="ES" Value="Instrucción de trabajo" />
+						<String Language="FR" Value="Instructions de travail" />
+						<String Language="NL" Value="Werkinstructie" />
+						<String Language="PL" Value="Instrukcja pracy" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GpbGepland1" Top="365" Left="5" Width="200" Height="120">
+					<CheckBox Value="1" TextLeft="False" DataBinding="F35" ActionId="A7" Id="CkbJobDurationInWorkingDays" Top="10" Left="5" Width="165" Height="25">
+						<Translations>
+							<String Language="DE" Value="Anhand der Werktage" />
+							<String Language="EN" Value="Based on working days" />
+							<String Language="ES" Value="En función de días laborables" />
+							<String Language="FR" Value="Sur base des jours ouvrables" />
+							<String Language="NL" Value="Op basis van werkdagen" />
+							<String Language="PL" Value="Na podstawie dni roboczych" />
+						</Translations>
+					</CheckBox>
+					<Label Id="TxtDoorlooptijd" Top="35" Left="5" Width="80">
+						<Translations>
+							<String Language="DE" Value="Bearbeitungszeit" />
+							<String Language="EN" Value="Lead time" />
+							<String Language="ES" Value="Tiempo de transcurso" />
+							<String Language="FR" Value="Temps de réalisation" />
+							<String Language="NL" Value="Doorlooptijd" />
+							<String Language="PL" Value="Czas realizacji" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F36" ActionId="A8" Id="EdtJobDurationCalc" Top="35" Left="75" Width="70" />
+					<Label Id="TxtDagen" Top="35" Left="155" Width="35">
+						<Translations>
+							<String Language="DE" Value="Tage" />
+							<String Language="EN" Value="days" />
+							<String Language="ES" Value="días" />
+							<String Language="FR" Value="jours" />
+							<String Language="NL" Value="dagen" />
+							<String Language="PL" Value="dni" />
+						</Translations>
+					</Label>
+					<Label Id="TxtStart" Top="55" Left="5" Width="75">
+						<Translations>
+							<String Language="DE" Value="Start" />
+							<String Language="EN" Value="Start" />
+							<String Language="ES" Value="Inicio" />
+							<String Language="FR" Value="Début" />
+							<String Language="NL" Value="Start" />
+							<String Language="PL" Value="Start" />
+						</Translations>
+					</Label>
+					<DateTime DataBinding="F37" ActionId="A9" Id="EdtJobSchStartDate" Top="55" Left="75" Width="100" />
+					<Label Id="TxtGereed" Top="75" Left="5" Width="60">
+						<Translations>
+							<String Language="DE" Value="Fertig" />
+							<String Language="EN" Value="Ready" />
+							<String Language="ES" Value="Ultimado" />
+							<String Language="FR" Value="Terminé" />
+							<String Language="NL" Value="Gereed" />
+							<String Language="PL" Value="Gotowy" />
+						</Translations>
+					</Label>
+					<DateTime DataBinding="F38" ActionId="A10" Id="EdtJobTargetDate" Top="75" Left="75" Width="100" />
+					<Label Id="TxtUren1" Top="95" Left="5" Width="60">
+						<Translations>
+							<String Language="DE" Value="Stunden" />
+							<String Language="EN" Value="Hours" />
+							<String Language="ES" Value="Horas" />
+							<String Language="FR" Value="Heures" />
+							<String Language="NL" Value="Uren" />
+							<String Language="PL" Value="Godziny" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F39" Id="EdtJobHoursCalc1" Top="95" Left="75" Width="70" />
+					<Translations>
+						<String Language="DE" Value="Geplant" />
+						<String Language="EN" Value="Planned" />
+						<String Language="ES" Value="Planificado" />
+						<String Language="FR" Value="Planification" />
+						<String Language="NL" Value="Gepland" />
+						<String Language="PL" Value="Planowane" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GroupBox1" Top="365" Left="215" Width="195" Height="125">
+					<Label Id="Label2" Top="35" Left="5" Width="75">
+						<Translations>
+							<String Language="NL" Value="Doorlooptijd" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F53" Id="Edtjobduration1" Top="35" Left="75" Width="40" />
+					<Label Id="Label6" Top="35" Left="120" Width="40">
+						<Translations>
+							<String Language="NL" Value="dagen" />
+						</Translations>
+					</Label>
+					<Label Id="Label3" Top="55" Left="5" Width="75">
+						<Translations>
+							<String Language="NL" Value="Activeer" />
+						</Translations>
+					</Label>
+					<DateTime DataBinding="F33" Id="Edtjobactivedate" Top="55" Left="75" Width="115" />
+					<Label Id="Label4" Top="75" Left="5" Width="75">
+						<Translations>
+							<String Language="NL" Value="Gereed" />
+						</Translations>
+					</Label>
+					<DateTime DataBinding="F52" Id="Edtjobfinishdate" Top="75" Left="75" Width="115" />
+					<Label Id="Label5" Top="95" Left="5" Width="50">
+						<Translations>
+							<String Language="NL" Value="Uren" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F54" Id="Edtjobhours1" Top="95" Left="75" Width="40" />
+					<Translations>
+						<String Language="NL" Value="Werkelijk" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GpbActies" Top="365" Left="415" Width="405" Height="125">
+					<Edit DataBinding="F2" Id="EdtJobDescr" Top="15" Left="65" Width="65" Visible="False" Mandatory="True" />
+					<Edit DataBinding="F3001" Id="Edtsdrtdescr" Top="15" Left="135" Width="60" Visible="False" ReadOnly="True" />
+					<Button ActionId="A11" DisableWhenReadOnly="True" Id="BtnBijwerkenVoortgang" Top="60" Left="20" Width="170">
+						<Translations>
+							<String Language="DE" Value="Fortschritt überarbeiten" />
+							<String Language="EN" Value="Update progress" />
+							<String Language="ES" Value="Actualizar progreso" />
+							<String Language="FR" Value="Actualiser évolution" />
+							<String Language="NL" Value="Bijwerken voortgang" />
+							<String Language="PL" Value="Edytuj postęp" />
+						</Translations>
+					</Button>
+					<Button ActionId="A12" Id="BtnPrintenWerkbon" Top="60" Left="215" Width="170">
+						<Translations>
+							<String Language="DE" Value="Arbeitsschein erstellen" />
+							<String Language="EN" Value="Print work form" />
+							<String Language="ES" Value="Imprimir hoja de trabajo" />
+							<String Language="FR" Value="Imprimer un bon de travail" />
+							<String Language="NL" Value="Printen werkbon" />
+							<String Language="PL" Value="Drukuj formularz zlecenia" />
+						</Translations>
+					</Button>
+					<Translations>
+						<String Language="DE" Value="Aktionen" />
+						<String Language="EN" Value="Actions" />
+						<String Language="ES" Value="Acciones" />
+						<String Language="FR" Value="Actions" />
+						<String Language="NL" Value="Acties" />
+						<String Language="PL" Value="Czynności" />
+					</Translations>
+				</GroupBox>
+				<Translations>
+					<String Language="DE" Value="Allgemein" />
+					<String Language="EN" Value="General" />
+					<String Language="ES" Value="General" />
+					<String Language="FR" Value="Généralités" />
+					<String Language="NL" Value="Algemeen" />
+					<String Language="PL" Value="Ogólne" />
+				</Translations>
+			</MultipageTab>
+			<MultipageTab Id="TabPage6">
+				<Grid RelationId="15" Id="Grid" Top="5" Left="5" Width="820" Height="475">
+					<GridColumnEdit DataBinding="F15000" Id="Edtjobilineid" Width="20" Visible="False" ReadOnly="True" />
+					<GridColumnEdit DataBinding="F15001" Id="Edtjobipoint" Width="50" />
+					<GridColumnButton DisableWhenReadOnly="False" Id="View" ActionId="0" Width="45">
+						<Translations>
+							<String Language="DE" Value="View" />
+							<String Language="EN" Value="View" />
+							<String Language="ES" Value="Ver" />
+							<String Language="FR" Value="Détails" />
+							<String Language="NL" Value="View" />
+							<String Language="PL" Value="Wyświetl" />
+						</Translations>
+					</GridColumnButton>
+					<GridColumnText DataBinding="F15002" Id="Edtjobiispltext" Width="200" ReadOnly="True" />
+					<GridColumnCheckBox Value="1" DataBinding="F15003" Id="Edtjobiqualok" Width="50" />
+					<GridColumnComboBox DropDownDisplayProperty="F32001" RelationDataBinding="FK0032" DataBinding="F15004" Id="Edtjobimsrid" Width="100" ReadOnly="True" />
+					<GridColumnEdit DataBinding="F15005" Id="Edtjobivalue" Width="100" />
+					<GridColumnEdit DataBinding="F15006" Id="Edtjobinominalvalue" Width="100" />
+					<GridColumnEdit DataBinding="F32000" Id="Edtmsrunit" Width="100" ReadOnly="True" />
+				</Grid>
+				<Translations>
+					<String Language="DE" Value="Inspektion" />
+					<String Language="EN" Value="Inspection" />
+					<String Language="ES" Value="Inspección" />
+					<String Language="FR" Value="Inspection" />
+					<String Language="NL" Value="Inspectie" />
+					<String Language="PL" Value="Inspekcja" />
+				</Translations>
+			</MultipageTab>
+			<MultipageTab Id="TabPage1" Visible="False">
+				<Edit DataBinding="F23000" Id="EdtEqmtflFalId" Top="10" Left="10" Width="100" ReadOnly="True" />
+				<Label Id="TxtRuimte" Top="10" Left="110" Width="115">
+					<Translations>
+						<String Language="DE" Value="Raum" />
+						<String Language="EN" Value="Room" />
+						<String Language="ES" Value="Espacio" />
+						<String Language="FR" Value="Local" />
+						<String Language="NL" Value="Ruimte" />
+						<String Language="PL" Value="Pomieszczenie" />
+					</Translations>
+				</Label>
+				<SelectionList RelationDataBinding="FK0016" ExplorerId="54" DataBinding="F8" ActionId="A1" Id="EdtJobSpcId" Top="10" Left="225" Width="100" />
+				<Edit DataBinding="F16000" Id="EdtSpcDescr" Top="10" Left="325" Width="180" ReadOnly="True" />
+				<Label Id="TxtVestiging" Top="30" Left="110" Width="115">
+					<Translations>
+						<String Language="DE" Value="Niederlassung" />
+						<String Language="EN" Value="Site" />
+						<String Language="ES" Value="Sucursal" />
+						<String Language="FR" Value="Filiale" />
+						<String Language="NL" Value="Vestiging" />
+						<String Language="PL" Value="Oddział" />
+					</Translations>
+				</Label>
+				<ComboBox DropDownDisplayProperty="F13000" RelationDataBinding="FK0013" DataBinding="F16" Id="EdtJobSitId" Top="30" Left="225" Width="280" />
+				<Edit DataBinding="F12000" Id="EdtEmpSkcId" Top="50" Left="10" Width="100" ReadOnly="True" />
+				<Label Id="TxtKostenplaats" Top="50" Left="110" Width="115">
+					<Translations>
+						<String Language="DE" Value="Kostenstelle" />
+						<String Language="EN" Value="Cost centre" />
+						<String Language="ES" Value="Centro de coste" />
+						<String Language="FR" Value="Centre de coûts" />
+						<String Language="NL" Value="Kostenplaats" />
+						<String Language="PL" Value="Centrum kosztów" />
+					</Translations>
+				</Label>
+				<SelectionList RelationDataBinding="FK0007" DataBinding="F21" Id="EdtJobCcrId" Top="50" Left="225" Width="100" />
+				<Edit DataBinding="F7000" Id="EdtCcrDescr1" Top="50" Left="325" Width="180" ReadOnly="True" />
+				<Edit DataBinding="F16001" Id="EdtSpcBldId" Top="70" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F5003" Id="EdtEqmBldId" Top="90" Left="10" Width="100" ReadOnly="True" />
+				<Label Id="TxtMiddelsoort" Top="100" Left="165" Width="115">
+					<Translations>
+						<String Language="DE" Value="Mittelart" />
+						<String Language="EN" Value="Inventory type" />
+						<String Language="ES" Value="Clase de recurso" />
+						<String Language="FR" Value="Type de ressource" />
+						<String Language="NL" Value="Middelsoort" />
+						<String Language="PL" Value="Rodzaj środka" />
+					</Translations>
+				</Label>
+				<Edit DataBinding="F7" Id="EdtJobEqmtId" Top="100" Left="280" Width="280" />
+				<Edit DataBinding="F5004" Id="EdtEqmSpcId" Top="110" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F2000" Id="EdtBldCcrId" Top="130" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F2001" Id="EdtBldDepId" Top="150" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F5002" Id="EdtEqmEqmtId" Top="155" Left="170" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F5005" Id="EdtEqmDepId" Top="170" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F5006" Id="EdtEqmCcrId" Top="190" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F16002" Id="EdtSpcCcrId" Top="210" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F16003" Id="EdtSpcDepId" Top="230" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F16004" Id="EdtSpcSitId" Top="250" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F2002" Id="EdtBldSitId" Top="270" Left="10" Width="100" ReadOnly="True" />
+				<Edit DataBinding="F5001" Id="EdtEqmSitId" Top="290" Left="10" Width="100" ReadOnly="True" />
+				<CheckBox Value="1" TextLeft="False" DataBinding="F14001" Id="Edteqmtusespecificfailtypes" Top="310" Left="10" Width="100" Visible="False" ReadOnly="True">
+					<Translations>
+						<String Language="DE" Value="Spezielle Störungsursachen anwenden für Auftrag" />
+						<String Language="EN" Value="Apply specific failure reasons to job" />
+						<String Language="ES" Value="Aplicar motivos específicos de avería para trabajo" />
+						<String Language="FR" Value="Appliquer des causes de dérangement spécifiques à la tâche" />
+						<String Language="NL" Value="Specifieke storingsoorzaken toepassen op job" />
+					</Translations>
+				</CheckBox>
+				<Translations>
+					<String Language="DE" Value="Invisible fields" />
+					<String Language="EN" Value="Invisible fields" />
+					<String Language="ES" Value="Campos invisibles" />
+					<String Language="FR" Value="Champs invisibles" />
+					<String Language="NL" Value="Invisible fields" />
+					<String Language="PL" Value="Niewidzialne pola" />
+				</Translations>
+			</MultipageTab>
+			<MultipageTab Id="TabPage2" Visible="False">
+				<Grid RelationId="25" Id="Table1" Top="5" Left="5" Width="815" Height="480">
+					<GridColumnComboBox DropDownDisplayProperty="F26002" RelationDataBinding="FK2526" DataBinding="F25000" Id="EdtJobrCrmId" Width="200" />
+					<GridColumnEdit DataBinding="F27000" Id="EdtSkcDescr1" Width="200" ReadOnly="True" />
+					<GridColumnEdit DataBinding="F25001" Id="EdtJobrHoursCalc" Width="80" />
+					<GridColumnEdit DataBinding="F25002" Id="EdtJobrTariffCalc" Width="80" ReadOnly="True" />
+					<GridColumnEdit DataBinding="F25003" Id="EdtJobrCostCalc" Width="80" ReadOnly="True" />
+					<GridColumnEdit DataBinding="F26001" Id="EdtCrmTariff1" Width="13" Visible="False" ReadOnly="True" />
+					<GridColumnEdit DataBinding="F26000" Id="EdtCrmSkcId" Width="15" Visible="False" ReadOnly="True" />
+					<GridColumnEdit DataBinding="F25004" Id="EdtJobrLineId" Width="18" Visible="False" ReadOnly="True" />
+				</Grid>
+				<Translations>
+					<String Language="DE" Value="Fachkräfte" />
+					<String Language="EN" Value="Craftsmen" />
+					<String Language="ES" Value="Especialistas" />
+					<String Language="FR" Value="Profession" />
+					<String Language="NL" Value="Vakmensen" />
+					<String Language="PL" Value="Fachowcy" />
+				</Translations>
+			</MultipageTab>
+			<MultipageTab Id="TabPage3">
+				<GroupBox Id="GpbGeplandeKosten" Top="0" Left="5" Width="815" Height="150">
+					<Label Id="TxtMagazijnMaterialen" Top="15" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Lagermaterialien" />
+							<String Language="EN" Value="Warehouse materials" />
+							<String Language="ES" Value="Materiales de almacén" />
+							<String Language="FR" Value="Matériaux de magasin" />
+							<String Language="NL" Value="Magazijnmaterialen" />
+							<String Language="PL" Value="Materiały magazynowe" />
+						</Translations>
+					</Label>
+					<Label Id="Txt" Top="15" Left="120" Width="15">
+						<Translations>
+							<String Language="DE" Value="€" />
+							<String Language="EN" Value="€" />
+							<String Language="ES" Value="€" />
+							<String Language="FR" Value="€" />
+							<String Language="NL" Value="€" />
+							<String Language="PL" Value="€" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F5" Id="EdtJobMatCalc" Top="15" Left="135" Width="100" />
+					<Number DataBinding="F12001" Id="EdtEmpTariff1" Top="15" Left="355" Width="15" Visible="False" ReadOnly="True" />
+					<Label Id="TxtExternen" Top="35" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Externe" />
+							<String Language="EN" Value="external parties" />
+							<String Language="ES" Value="Externos" />
+							<String Language="FR" Value="externes" />
+							<String Language="NL" Value="Externen" />
+							<String Language="PL" Value="Strony zewnętrzne" />
+						</Translations>
+					</Label>
+					<Label Id="Txt1" Top="35" Left="120" Width="15">
+						<Translations>
+							<String Language="DE" Value="€" />
+							<String Language="EN" Value="€" />
+							<String Language="ES" Value="€" />
+							<String Language="FR" Value="€" />
+							<String Language="NL" Value="€" />
+							<String Language="PL" Value="€" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F9" Id="EdtJobExtCalc" Top="35" Left="135" Width="100" />
+					<Label Id="TxtGereedschappen" Top="55" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Werkzeuge" />
+							<String Language="EN" Value="Tools" />
+							<String Language="ES" Value="Herramientas" />
+							<String Language="FR" Value="Outils" />
+							<String Language="NL" Value="Gereedschappen" />
+							<String Language="PL" Value="Przyrządy" />
+						</Translations>
+					</Label>
+					<Label Id="Txt2" Top="55" Left="120" Width="15">
+						<Translations>
+							<String Language="DE" Value="€" />
+							<String Language="EN" Value="€" />
+							<String Language="ES" Value="€" />
+							<String Language="FR" Value="€" />
+							<String Language="NL" Value="€" />
+							<String Language="PL" Value="€" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F14" Id="EdtJobTlsCalc" Top="55" Left="135" Width="100" />
+					<Label Id="TxtPersoneel" Top="75" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Personal" />
+							<String Language="EN" Value="Personnel" />
+							<String Language="ES" Value="Personal" />
+							<String Language="FR" Value="Personnel" />
+							<String Language="NL" Value="Personeel" />
+							<String Language="PL" Value="Personel" />
+						</Translations>
+					</Label>
+					<Label Id="Txt3" Top="75" Left="120" Width="15">
+						<Translations>
+							<String Language="DE" Value="€" />
+							<String Language="EN" Value="€" />
+							<String Language="ES" Value="€" />
+							<String Language="FR" Value="€" />
+							<String Language="NL" Value="€" />
+							<String Language="PL" Value="€" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F45" Id="EdtJobResCalc" Top="75" Left="135" Width="100" ReadOnly="True" />
+					<Label Id="TxtTotaal" Top="105" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Gesamt" />
+							<String Language="EN" Value="Total" />
+							<String Language="ES" Value="Total" />
+							<String Language="FR" Value="Total" />
+							<String Language="NL" Value="Totaal" />
+							<String Language="PL" Value="Łącznie" />
+						</Translations>
+					</Label>
+					<Label Id="Txt4" Top="105" Left="120" Width="15">
+						<Translations>
+							<String Language="DE" Value="€" />
+							<String Language="EN" Value="€" />
+							<String Language="ES" Value="€" />
+							<String Language="FR" Value="€" />
+							<String Language="NL" Value="€" />
+							<String Language="PL" Value="€" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F49" Id="EdtJobTotalCalc" Top="105" Left="135" Width="100" ReadOnly="True" />
+					<Label Id="TxtUren" Top="125" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Stunden" />
+							<String Language="EN" Value="Hours" />
+							<String Language="ES" Value="Horas" />
+							<String Language="FR" Value="Heures" />
+							<String Language="NL" Value="Uren" />
+							<String Language="PL" Value="Godziny" />
+						</Translations>
+					</Label>
+					<Number DataBinding="F22" Id="EdtJobHoursCalc" Top="125" Left="135" Width="100" />
+					<Translations>
+						<String Language="DE" Value="Geplante Kosten" />
+						<String Language="EN" Value="Planned costs" />
+						<String Language="ES" Value="Costes previstos" />
+						<String Language="FR" Value="Coûts prévisionnels" />
+						<String Language="NL" Value="Geplande kosten" />
+						<String Language="PL" Value="Planowane koszty" />
+					</Translations>
+				</GroupBox>
+				<Translations>
+					<String Language="DE" Value="Kosten" />
+					<String Language="EN" Value="Costs" />
+					<String Language="ES" Value="Costes" />
+					<String Language="FR" Value="Coûts" />
+					<String Language="NL" Value="Kosten" />
+					<String Language="PL" Value="Koszty" />
+				</Translations>
+			</MultipageTab>
+			<MultipageTab Id="TabPage4">
+				<GroupBox Id="GpbStatus" Top="0" Left="5" Width="815" Height="120">
+					<Label Id="TxtDatum" Top="15" Left="120" Width="115">
+						<Translations>
+							<String Language="DE" Value="Datum" />
+							<String Language="EN" Value="Date" />
+							<String Language="ES" Value="Fecha" />
+							<String Language="FR" Value="Date" />
+							<String Language="NL" Value="Datum" />
+							<String Language="PL" Value="Data" />
+						</Translations>
+					</Label>
+					<Label Id="TxtDoor" Top="15" Left="235" Width="115">
+						<Translations>
+							<String Language="DE" Value="Durch" />
+							<String Language="EN" Value="By" />
+							<String Language="ES" Value="Por" />
+							<String Language="FR" Value="Par" />
+							<String Language="NL" Value="Door" />
+							<String Language="PL" Value="Przez" />
+						</Translations>
+					</Label>
+					<Label Id="TxtAanvraag" Top="35" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Anfrage" />
+							<String Language="EN" Value="Request" />
+							<String Language="ES" Value="Solicitud" />
+							<String Language="FR" Value="Demande" />
+							<String Language="NL" Value="Aanvraag" />
+							<String Language="PL" Value="Zamówienie" />
+						</Translations>
+					</Label>
+					<DateTime DataBinding="F40" Id="EdtJobRequestDate" Top="35" Left="120" Width="100" ReadOnly="True" />
+					<ComboBox DropDownDisplayProperty="F20000" RelationDataBinding="FK0020" DataBinding="F41" Id="EdtJobRequestEmpId" Top="35" Left="220" Width="195" ReadOnly="True" />
+					<Label Id="TxtOpen" Top="55" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Offen" />
+							<String Language="EN" Value="Open" />
+							<String Language="ES" Value="Abierto" />
+							<String Language="FR" Value="Ouvrir" />
+							<String Language="NL" Value="Open" />
+							<String Language="PL" Value="Otwarty" />
+						</Translations>
+					</Label>
+					<DateTime DataBinding="F42" Id="EdtJobOpenDate" Top="55" Left="120" Width="100" ReadOnly="True" />
+					<ComboBox DropDownDisplayProperty="F21000" RelationDataBinding="FK0021" DataBinding="F43" Id="EdtJobOpenEmpId" Top="55" Left="220" Width="195" ReadOnly="True" />
+					<Label Id="TxtActief" Top="75" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Genehmigt" />
+							<String Language="EN" Value="Approved" />
+							<String Language="ES" Value="Aprobado" />
+							<String Language="FR" Value="Approuvé" />
+							<String Language="NL" Value="Goedgekeurd" />
+							<String Language="PL" Value="Zatwierdzony" />
+						</Translations>
+					</Label>
+					<DateTime DataBinding="F44" Id="EdtJobApprvDate" Top="75" Left="120" Width="100" ReadOnly="True" />
+					<ComboBox DropDownDisplayProperty="F18000" RelationDataBinding="FK0018" DataBinding="F46" Id="EdtJobApprvEmpId" Top="75" Left="220" Width="195" ReadOnly="True" />
+					<Label Id="TxtUitgesteld" Top="95" Left="5" Width="115">
+						<Translations>
+							<String Language="DE" Value="Aufgeschoben" />
+							<String Language="EN" Value="Postponed" />
+							<String Language="ES" Value="Pospuesto" />
+							<String Language="FR" Value="Postposé" />
+							<String Language="NL" Value="Uitgesteld" />
+							<String Language="PL" Value="Odroczony" />
+						</Translations>
+					</Label>
+					<DateTime DataBinding="F47" Id="EdtJobPostpDate" Top="95" Left="120" Width="100" ReadOnly="True" />
+					<ComboBox DropDownDisplayProperty="F19000" RelationDataBinding="FK0019" DataBinding="F48" Id="EdtJobPostpEmpId" Top="95" Left="220" Width="195" ReadOnly="True" />
+					<Edit DataBinding="F20" Id="EdtJobPostpRemark" Top="95" Left="630" Width="15" Visible="False" />
+					<Translations>
+						<String Language="DE" Value="Status" />
+						<String Language="EN" Value="Status" />
+						<String Language="ES" Value="Estado" />
+						<String Language="FR" Value="Statut" />
+						<String Language="NL" Value="Status" />
+						<String Language="PL" Value="Status" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GpbVoortgangsstatus" Top="120" Left="5" Width="815" Height="365">
+					<Grid RelationId="28" Id="Table" Top="15" Left="5" Width="800" Height="345">
+						<GridColumnEdit DataBinding="F28000" Id="EdtJobprshDate" Width="120" ReadOnly="True" />
+						<GridColumnEdit DataBinding="F28001" Id="EdtJobprshRemarkText" Width="200" ReadOnly="True" />
+						<GridColumnComboBox DropDownDisplayProperty="F31000" RelationDataBinding="FK2831" DataBinding="F28002" Id="EdtJobprshOldPrsId" Width="150" ReadOnly="True" />
+						<GridColumnComboBox DropDownDisplayProperty="F30000" RelationDataBinding="FK2830" DataBinding="F28003" Id="EdtJobprshNewPrsId" Width="150" ReadOnly="True" />
+						<GridColumnComboBox DropDownDisplayProperty="F29000" RelationDataBinding="FK2829" DataBinding="F28004" Id="EdtJobprshEmpId" Width="150" ReadOnly="True" />
+					</Grid>
+					<Translations>
+						<String Language="DE" Value="Fortschrittsstatus" />
+						<String Language="EN" Value="Progress status" />
+						<String Language="ES" Value="Estado de progreso" />
+						<String Language="FR" Value="Statut de progression" />
+						<String Language="NL" Value="Voortgangsstatus" />
+						<String Language="PL" Value="Status postępu" />
+					</Translations>
+				</GroupBox>
+				<Translations>
+					<String Language="DE" Value="Fortschritt" />
+					<String Language="EN" Value="Progress" />
+					<String Language="ES" Value="Progreso" />
+					<String Language="FR" Value="Evolution" />
+					<String Language="NL" Value="Voortgang" />
+					<String Language="PL" Value="Postęp" />
+				</Translations>
+			</MultipageTab>
+			<MultipageTab Id="TabPage5">
+				<GroupBox Id="GpbAfbeelding1" Top="0" Left="5" Width="405" Height="240">
+					<Image DataBinding="F4" Id="EdtJobImageFile" Top="15" Left="5" Width="395" Height="220" />
+					<Translations>
+						<String Language="DE" Value="Bild 1" />
+						<String Language="EN" Value="Image 1" />
+						<String Language="ES" Value="Imagen 1" />
+						<String Language="FR" Value="Image 1" />
+						<String Language="NL" Value="Afbeelding 1" />
+						<String Language="PL" Value="Obraz 1" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GpbAfbeelding2" Top="0" Left="415" Width="405" Height="240">
+					<Image DataBinding="F6" Id="EdtJobImagefile2" Top="15" Left="5" Width="395" Height="220" />
+					<Translations>
+						<String Language="DE" Value="Bild 2" />
+						<String Language="EN" Value="Image 2" />
+						<String Language="ES" Value="Imagen 2" />
+						<String Language="FR" Value="Image 2" />
+						<String Language="NL" Value="Afbeelding 2" />
+						<String Language="PL" Value="Obraz 2" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GpbAfbeelding3" Top="245" Left="5" Width="405" Height="240">
+					<Image DataBinding="F29" Id="EdtJobImagefile3" Top="15" Left="5" Width="395" Height="220" />
+					<Translations>
+						<String Language="DE" Value="Bild 3" />
+						<String Language="EN" Value="Image 3" />
+						<String Language="ES" Value="Imagen 3" />
+						<String Language="FR" Value="Image 3" />
+						<String Language="NL" Value="Afbeelding 3" />
+						<String Language="PL" Value="Obraz 3" />
+					</Translations>
+				</GroupBox>
+				<GroupBox Id="GpbAfbeelding4" Top="245" Left="415" Width="405" Height="240">
+					<Image DataBinding="F30" Id="EdtJobImagefile4" Top="15" Left="5" Width="395" Height="220" />
+					<Translations>
+						<String Language="DE" Value="Bild 4" />
+						<String Language="EN" Value="Image 4" />
+						<String Language="ES" Value="Imagen 4" />
+						<String Language="FR" Value="Image 4" />
+						<String Language="NL" Value="Afbeelding 4" />
+						<String Language="PL" Value="Obraz 4" />
+					</Translations>
+				</GroupBox>
+				<Translations>
+					<String Language="DE" Value="Bilder" />
+					<String Language="EN" Value="Images" />
+					<String Language="ES" Value="Imágenes" />
+					<String Language="FR" Value="Images" />
+					<String Language="NL" Value="Afbeeldingen" />
+					<String Language="PL" Value="Ilustracje" />
+				</Translations>
+			</MultipageTab>
+		</Multipage>
+	</Form>
+	<Actions>
+		<Action Id="A0" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField960" />
+		<Action Id="A1" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField959" />
+		<Action Id="A3" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField726">
+			<WorkflowParameters>
+				<ActionParameter Name="RecalculateDates" Value="true" />
+			</WorkflowParameters>
+		</Action>
+		<Action Id="A4" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField726">
+			<WorkflowParameters>
+				<ActionParameter Name="RecalculateDates" Value="true" />
+			</WorkflowParameters>
+		</Action>
+		<Action Id="A5" RelationId="0" ExecuteWorkflow="True" WorkflowName="actionfield587" />
+		<Action Id="A6" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField676">
+			<WorkflowParameters>
+				<ActionParameter Name="DocumentContext" Value="1" />
+				<ActionParameter Name="FileSystemPath" Value="001" />
+			</WorkflowParameters>
+		</Action>
+		<Action Id="A7" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField732">
+			<WorkflowParameters>
+				<ActionParameter Name="RecalculateDates" Value="true" />
+			</WorkflowParameters>
+		</Action>
+		<Action Id="A8" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField732">
+			<WorkflowParameters>
+				<ActionParameter Name="RecalculateDates" Value="true" />
+			</WorkflowParameters>
+		</Action>
+		<Action Id="A9" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField732">
+			<WorkflowParameters>
+				<ActionParameter Name="RecalculateDates" Value="true" />
+			</WorkflowParameters>
+		</Action>
+		<Action Id="A10" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField732">
+			<WorkflowParameters>
+				<ActionParameter Name="RecalculateDates" Value="true" />
+			</WorkflowParameters>
+		</Action>
+		<Action Id="A11" RelationId="0" ExecuteWorkflow="True" WorkflowName="ActionField286">
+			<WorkflowParameters>
+				<ActionParameter Name="BookHours" Value="false" />
+				<ActionParameter Name="UseReleaseCondition" Value="false" />
+				<ActionParameter Name="ProgressStatusContext" Value="32" />
+			</WorkflowParameters>
+			<Settings>
+				<ActionParameter Name="Job.JobTextField" Value="FeedbackText" />
+				<ActionParameter Name="Job.AddTextAboveTotalText" Value="true" />
+			</Settings>
+		</Action>
+		<Action Id="A12" RelationId="0" ExecuteWorkflow="True" ExecuteNavigateToScreen="True" WorkflowName="jobprint04-02">
+			<Navigation>
+				<MaskInfoContextStatus Context="2048" Status="32" ViewScreen="job93" />
+			</Navigation>
+		</Action>
+		<Action Id="0" RelationId="15" ExecuteNavigateToScreen="True" />
+	</Actions>
+	<Rules xmlns="http://www.ultimo.net/ConditionalFormatting.xsd">
+		<FormattingRules>
+			<FormattingRule Action="OnChange">
+				<Triggers>
+					<Trigger PropertyName="${Edt_jobeqmoperational}" />
+					<Trigger PropertyName="${Edt_jobeqmoperational1}" />
+				</Triggers>
+				<Choose>
+					<When Condition="${Edt_jobeqmoperational}=='J'">
+						<Assign PropertyName="${Edt_jobeqmoperational2.Value}" Value="'J'" />
+					</When>
+					<When Condition="${Edt_jobeqmoperational1}=='N'">
+						<Assign PropertyName="${Edt_jobeqmoperational2.Value}" Value="'N'" />
+					</When>
+				</Choose>
+			</FormattingRule>
+			<FormattingRule Action="OnChange">
+				<Triggers>
+					<Trigger PropertyName="${EdtJobSdrtId}" />
+				</Triggers>
+				<Choose>
+					<When Condition="${EdtJobSdrtId}=='999'">
+						<Assign PropertyName="${EdtJobReportText.Mandatory}" Value="True" />
+					</When>
+				</Choose>
+			</FormattingRule>
+			<FormattingRule Action="OnChange" Comments="JobSit will be filled by BldSit.">
+				<Triggers>
+					<Trigger PropertyName="${EdtBldSitId}" />
+				</Triggers>
+				<Choose>
+					<When Condition="${EdtBldSitId.Value}!=Empty">
+						<Assign PropertyName="${EdtJobSitId.Value}" Value="=${EdtBldSitId.Value}" />
+						<Assign PropertyName="${EdtJobSitId.Enabled}" Value="False" />
+					</When>
+				</Choose>
+			</FormattingRule>
+			<FormattingRule Action="OnChange">
+				<Triggers>
+					<Trigger PropertyName="${EdtJobDocId}" />
+				</Triggers>
+				<Choose>
+					<When Condition="${EdtJobDocId}!=Empty">
+						<Assign PropertyName="${BtnBijlageUploaden.Enabled}" Value="False" />
+					</When>
+				</Choose>
+			</FormattingRule>
+			<FormattingRule Action="OnChange">
+				<Triggers>
+					<Trigger PropertyName="${Edtjobeqmid}" />
+				</Triggers>
+				<Choose>
+					<When Condition="${Edtjobeqmid}!=Empty">
+						<Assign PropertyName="${Edt_jobetpid.Enabled}" Value="True" />
+					</When>
+				</Choose>
+			</FormattingRule>
+			<FormattingRule Action="OnChange">
+				<Triggers>
+					<Trigger PropertyName="${EdtJobEmpId}" />
+				</Triggers>
+				<Choose>
+					<When Condition="${EdtJobSkcId}==Empty">
+						<Assign PropertyName="${EdtJobSkcId.Value}" Value="=${EdtEmpSkcId.Value}" />
+					</When>
+				</Choose>
+			</FormattingRule>
+		</FormattingRules>
+		<CalculationRules>
+			<CalculationRule Target="${EdtJobResCalc}" Expression="${EdtJobHoursCalc}*${EdtEmpTariff1}" />
+			<CalculationRule Target="${Table1.Cells.EdtJobrCostCalc}" Expression="${Table1.Cells.EdtJobrHoursCalc}*${Table1.Cells.EdtJobrTariffCalc}" />
+		</CalculationRules>
+		<CopyRules>
+			<CopyRule Target="${Table1.Cells.EdtJobrTariffCalc}" Source="Table1.Cells.edtcrmtariff1" Trigger="Table1.Cells.edtjobrcrmid" Mode="Overwrite" />
+			<CopyRule Target="${EdtJobDescr}" Source="${Edtsdrtdescr}" Trigger="${EdtJobSdrtId}" Mode="Overwrite" />
+		</CopyRules>
+	</Rules>
+	<VBScript><![CDATA[Function SetWhereClauseJobBldId
+	If Len(Fields ("EdtJobDepId").GetText)>0 Then
+		Fields("EdtJobBldId").SetWhereClause "BldDepId = '" & Fields ("EdtJobDepId").GetText & "'  "
+	Else
+		Fields("EdtJobBldId").SetWhereClause ""  
+	End If
+End Function
+
+Sub EdtJobBldId_OnSetFocus()
+	SetWhereClauseJobBldId
+End Sub
+
+Function SetWhereClauseJobEqmId
+	If Len(Fields ("EdtJobBldId").GetText)>0 Then
+		Fields("EdtJobEqmId").SetWhereClause "EqmBldId = '" & Fields ("EdtJobBldId").GetText & "'  "
+	Else
+		Fields("EdtJobEqmId").SetWhereClause ""  
+	End If
+End Function
+
+Sub EdtJobEqmId_OnSetFocus()
+	SetWhereClauseJobEqmId
+End Sub
+
+Function SetWhereClauseJobetpid
+	If Len(Fields ("EdtJobeqmid").GetText)>0 Then
+		Fields("Edt_jobetpid").SetWhereClause "_EtpEqmtId = '" & Fields ("EdtEqmEqmtId").GetText & "'  "
+	Else
+		Fields("Edt_jobetpid").SetWhereClause ""  
+	End If
+End Function
+
+Sub Edt_jobetpid_OnSetFocus()
+	SetWhereClauseJobetpid
+End Sub
+
+Sub EdtJobBldId_OnSetFocus()
+	SetWhereClauseJobBldId
+End Sub
+
+Sub EdtJobEqmId_OnSetFocus()
+	SetWhereClauseJobEqmId
+End Sub
+
+Sub EdtJobSkcId_OnValidate()
+	Fields("EdtJobEmpId").SetText "", true
+End Sub
+
+Function SetWhereClauseJobEmpId
+	strSkcId = Fields("EdtJobSkcId").GetText
+	If Len (strSkcId) <> 0 Then
+		'Toon medewerkers van de vakgroep
+		Fields("EdtJobEmpId").SetWhereClause "EmpSkcId = '" &strSkcId & "'  "
+	Else
+		'Toon alle medewerkers
+		Fields ("EdtJobEmpId").SetWhereClause "" 
+	 End If
+End Function
+
+Sub EdtJobEmpId_OnSetFocus()
+	SetWhereClauseJobEmpId
+End Sub
+
+Function SetWhereClauseJobFalId()
+   Dim StrJobEqmtId
+   StrJobEqmtId = Fields("EdtJobEqmtId").GetValue
+   if len(StrJobEqmtId) <> 0 and Fields("Edteqmtusespecificfailtypes").GetCheck then
+		Fields("EdtJobFalId").SetWhereClause "falid in (select EqmtflFalId from dba.EqmTypeFailType where EqmtflEqmtId = '" & StrJobEqmtId & "')"
+   else
+		Fields("EdtJobFalId").SetWhereClause ""
+   end if
+End Function
+
+Function EdtJobFalId_OnSetFocus()
+   SetWhereClauseJobFalId
+End Function
+
+Function EdtJobEqmtId_OnValidate()
+   Fields("EdtJobFalId").SetText "", true
+end function]]></VBScript>
+</DataEntryScreen>
